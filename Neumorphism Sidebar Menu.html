@@ -1,0 +1,194 @@
+
+<!--Design by foolishdeveloper.com -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body{
+   background-position: center;
+  background-size: cover;
+  height: 700px;
+  background: #dde1e7;
+  background-repeat: no-repeat;
+}
+#check {
+  display: none;
+}
+label #btn,
+label #cancle {
+  position: absolute;
+  cursor: pointer;
+  background: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(128, 135, 148, 0.562);
+  color: rgb(4, 145, 216);
+  border-radius: 3px;
+}
+
+label #btn {
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: rgb(14, 186, 243);
+  padding: 6px 12px;
+  transition: all 0.5s;
+}
+#cancle {
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #0a5275;
+  padding: 4px 9px;
+  transition: all 0.5s;
+}
+/* active side bar */
+.sidebar {
+  position: absolute;
+  left: -250px;
+  width: 250px;
+  
+  background: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(128, 135, 148, 0.562);
+  transition: all 0.5s ease;
+  
+  
+}
+#check:checked ~ .sidebar {
+  left: 0;
+}
+#check:checked ~ label #btn {
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+#check:checked ~ label #cancle {
+  left: 245px;
+}
+#check:checked ~ section {
+  margin-left: 250px;
+}
+.sidebar header img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  box-shadow: 
+
+0px 0px 2px #5f5f5f,
+0px 0px 0px 7px #ecf0f3,
+8px 8px 15px #a7aaaf,
+-8px -8px 15px #ffffff
+;
+}
+.sidebar header {
+  font-size: 24px;
+  color: rgb(57, 57, 57);
+  text-align: center;
+  line-height: 30px;
+  background: #dde1e7;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 56px;
+  font-size: 18px;
+  color: rgb(68, 68, 68);
+  padding-left: 40px;
+  box-sizing: border-box;
+  margin-top: 12px;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(128, 135, 148, 0.562);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.4s;
+}
+.sidebar ul a i {
+  margin-right: 16px;
+}
+/* hover effect */
+ul li:hover a {
+  padding-left: 70px;
+  color: rgb(0, 158, 216);
+  box-shadow: inset -1px -1px 2px #dde1e7;
+}
+      
+/* Social Links */
+.social-links i {
+  padding: 10px;
+  margin-left: 16px;
+  margin-top: 10px;
+  color: rgb(4, 61, 118);
+  background: #dde1e7;
+  font-size: 20px;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(128, 135, 148, 0.562);
+}
+/* icons hover effect */
+.social-links i:hover {
+  color: rgb(0, 170, 255);
+}
+ 
+.sidebar header p {
+  padding: 15px;
+}
+
+
+    </style>
+</head>
+<body>
+   
+  <input type="checkbox" id="check">
+
+  <label for="check">
+<i class="fa fa-bars" id="btn"></i>
+<i class="fa fa-times" id="cancle"></i>
+
+
+  </label>
+  <div class="sidebar">
+<header><img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg">
+<p>Foolish Developer</p>
+</header>
+<ul>
+    <li><a href="#"><i class="fa fa-qrcode"></i>Dashboard</a></li>
+    <li><a href="#"><i class="fa fa-link"></i>Shortcuts</a></li>
+    <li><a href="#"><i class="fa fa-eye"></i>Overview</a></li>
+    <li><a href="#"><i class="fa fa-book"></i>Event</a></li>
+    <li><a href="#"><i class="fa fa-question-circle"></i>About</a></li>
+    <li><a href="#"><i class="fas fa-desktop"></i>Service</a></li>
+    <li><a href="#"><i class="fas fa-user-shield"></i>Contact</a></li>
+    </ul>
+   <li>
+      <div class="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        
+      </div>
+    </li>
+   
+
+</div>
+<section></section>
+
+        
+    </div>
+
+</body>
+</html>
