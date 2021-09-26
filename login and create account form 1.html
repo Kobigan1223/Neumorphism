@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <style>
+ @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: #dde1e7;
+}
+
+.wrapper{
+  max-width: 400px;
+  width: 100%;
+  height: 420px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background: #dde1e7;
+  box-shadow: -3px -3px 7px #ffffff73,
+              2px 2px 5px rgba(94, 104, 121, 0.288);
+}
+
+.container{
+  padding: 35px 40px;
+}
+
+.wrapper .tabs ul{
+  width: 100%;
+   
+
+  margin-bottom:30px;
+  box-shadow: 2px 2px 5px #babecc,
+              -5px -5px 10px #ffffff73;
+  display: flex;
+}
+    
+    
+
+.wrapper .tabs ul li{
+  width: 50%;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #35c868;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.wrapper .tabs ul li.active{
+  background: #dde1e7;
+  color: rgb(0, 0, 0);
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+
+.wrapper .input_field{
+  margin-bottom: 25px;
+}
+
+.wrapper .input_field .input{
+  width: 100%;
+  border: none;
+  background: #dde1e7;
+  color: black;
+  font-family: sans-serif;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+  font-size: 14px;
+  padding: 17px;
+  border-radius: 10px;
+} 
+
+.wrapper .btn{
+  margin-top: 30px;
+  background: #dde1e7;
+  box-shadow: 2px 2px 5px #babecc,
+              -5px -5px 10px #ffffff73;
+  padding: 12px;
+  text-align: center;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+.wrapper .btn:hover{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+.wrapper .btn a{
+  color: rgb(0, 0, 0);
+  display: block;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.icon-button{
+  margin-top: 50px;
+}
+.icon-button span{
+  margin-left: 20px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 15px;
+  padding-bottom: 6px;
+   
+ border-radius: 5px;
+  line-height: 30px;
+  
+  background: #dde1e7;
+  box-shadow: 2px 2px 5px #babecc,
+              -5px -5px 10px #ffffff73;
+   
+}
+.icon-button span:hover{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+.icon-button span i{
+  font-size: 25px;
+   
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+        <div class="tabs">
+          <ul>
+            <li class="sign_in_li">Sign in</li>
+            <li class="sign_up_li">Sign up</li>
+          </ul>
+        </div>
+      
+        <div class="sign_in">
+          <div class="input_field">
+            <input type="text" placeholder="E-mail" class="input">
+          </div>
+          <div class="input_field">
+            <input type="password" placeholder="Password" class="input">
+          </div>
+          <div class="btn"><a href="#">Sign in</a></div>
+          <div class="icon-button"> 
+            
+            <span class="facebook"><i class="fa fa-facebook"></i></span>
+  
+            <span><i class="fa fa-youtube"></i></span>
+            <span><i class="fa fa-twitter"></i></span>
+            <span><i class="fa fa-google"></i></span>
+  
+  
+          </div>
+        </div>
+        
+        <div class="sign_up">
+      <div class="input_field">
+        <input type="text" placeholder="Username" class="input">
+      </div>
+      <div class="input_field">
+        <input type="text" placeholder="E-mail" class="input">
+      </div>
+      <div class="input_field">
+        <input type="password" placeholder="Password" class="input">
+      </div>
+      <div class="btn"><a href="#">Sign up</a></div>
+    </div>
+ 
+       
+      
+    </div>
+    </div>
+<script>
+ $(".sign_up").hide();
+$(".sign_in_li").addClass("active");
+
+$(".sign_up_li").click(function(){
+  $(this).addClass("active");
+  $(".sign_in_li").removeClass("active");
+  $(".sign_up").show();
+   $(".sign_in").hide();
+})
+
+$(".sign_in_li").click(function(){
+  $(this).addClass("active");
+  $(".sign_up_li").removeClass("active");
+  $(".sign_in").show();
+   $(".sign_up").hide();
+})
+</script>
+
+</body>
+</html>
